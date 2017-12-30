@@ -40,6 +40,7 @@
 #endif
 
 - (void)km_layoutSubviews {
+    if (self.frame.origin.y < 20 && self.frame.origin.y > (self.frame.size.height * -1)) { return; }
     [self km_layoutSubviews];
     UIView *backgroundView = [self valueForKey:@"_backgroundView"];
     CGRect frame = backgroundView.frame;
